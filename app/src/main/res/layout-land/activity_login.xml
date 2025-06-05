@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".studentFragmentAndActivity.login_activity">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <ImageView
+        android:id="@+id/logoImage"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_margin="16dp"
+        android:src="@drawable/zyra"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:text="Zyra"
+        android:textColor="@color/black"
+        android:textSize="19.3sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/logoImage"
+        app:layout_constraintStart_toEndOf="@+id/logoImage" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:text="Welcome back !"
+        android:textColor="@color/black"
+        android:textSize="45sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.961"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/logoImage" />
+
+    <TextView
+        android:id="@+id/subtitleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:text="Login to a Zyra account"
+        android:textColor="#888888"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animationView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/button_signup"
+        app:layout_constraintEnd_toStartOf="@+id/subtitleText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subtitleText"
+        app:layout_constraintVertical_bias="1.0"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/animation_login" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/userLoginEmailField"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginVertical="8dp"
+        android:hint="User Email"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp"
+        app:boxStrokeColor="@color/black"
+        app:hintTextColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/animationView"
+        app:layout_constraintTop_toBottomOf="@+id/subtitleText">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/userLoginEmailEditText"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:inputType="textEmailAddress" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/userLoginPasswordField"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginVertical="8dp"
+        android:hint="User Password"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp"
+        app:boxStrokeColor="@color/black"
+        app:hintTextColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/animationView"
+        app:layout_constraintTop_toBottomOf="@+id/userLoginEmailField">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/userLoginPasswordEditText"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:inputType="textPassword" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/userLoginButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginVertical="8dp"
+        android:backgroundTint="@color/black"
+        android:fontFamily="@font/telegraf_ultra_bold"
+        android:text="Login"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.458"
+        app:layout_constraintStart_toEndOf="@+id/animationView"
+        app:layout_constraintTop_toBottomOf="@+id/userLoginPasswordField" />
+
+    <TextView
+        android:id="@+id/haveAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:text="Don't have an account?"
+        android:textColor="#737373"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/userLoginButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/userLoginButton"
+        app:layout_constraintTop_toBottomOf="@+id/userLoginButton" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_signup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginVertical="8dp"
+        android:backgroundTint="@color/white"
+        android:fontFamily="@font/telegraf_ultra_bold"
+        android:text="Create account"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/animationView"
+        app:layout_constraintTop_toBottomOf="@+id/haveAccount"
+        app:strokeColor="@color/black"
+        app:strokeWidth="5px" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

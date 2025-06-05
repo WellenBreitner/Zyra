@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="16dp"
+    android:fitsSystemWindows="true"
+    android:background="@color/white"
+    tools:context=".studentFragmentAndActivity.student_material_details_activity">
+
+    <ImageButton
+        android:id="@+id/materialDetailsBackButton"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@color/white"
+        android:src="@drawable/back_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/materialDetailsBackButton"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/materialDetailsName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/telegraf_ultra_bold"
+            android:lines="1"
+            android:text="Material name"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/materialPostDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/telegraf_regular_font"
+            android:lines="1"
+            android:text="Post date"
+            android:textColor="@color/gray"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/adminMaterialClassName" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:fontFamily="@font/telegraf_ultra_bold"
+        android:text="Class Description"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialDetailsBackButton" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/joinClassButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/description">
+
+        <TextView
+            android:id="@+id/materialClassDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/telegraf_regular_font"
+            app:layout_constraintBottom_toTopOf="@+id/joinClassButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/description"
+            app:layout_constraintVertical_bias="0.0" />
+    </ScrollView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/joinClassButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:backgroundTint="@color/black"
+        android:text="Join Class"
+        android:textSize="18dp"
+        android:fontFamily="@font/telegraf_ultra_bold"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

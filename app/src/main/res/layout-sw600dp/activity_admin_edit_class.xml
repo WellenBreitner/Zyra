@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".adminFragmentAndActivity.admin_edit_class_activity">
+
+    <!-- edit class -->
+
+    <LinearLayout
+        android:id="@+id/editClassLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginHorizontal="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/edit_icon" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginHorizontal="8dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/telegraf_regular_font"
+            android:text="Edit class"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/editClassTextField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editClassLinearLayout">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/editClassNameField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:hint="Class name"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:boxStrokeColor="@color/black"
+            app:hintTextColor="@color/black">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editClassNameEditText"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/editClassLecturerField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:hint="Lecturer name"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:boxStrokeColor="@color/black"
+            app:hintTextColor="@color/black">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editClassLecturerEditText"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:inputType="textPersonName" />
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/addLecturePhotoLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginVertical="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editClassTextField">
+
+        <ImageView
+            android:id="@+id/editClassImageView"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/photo_icon" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/editLecturePhotoPicker"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:backgroundTint="@color/white"
+            android:text="Edit lecturer photo"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:cornerRadius="0dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginVertical="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addLecturePhotoLinearLayout">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/cancelEditClassButton"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/white"
+            android:fontFamily="@font/telegraf_ultra_bold"
+            android:text="Cancel"
+            android:textColor="@color/black"
+            app:strokeWidth="2dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/editClassButton"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/black"
+            android:fontFamily="@font/telegraf_ultra_bold"
+            android:text="Edit" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

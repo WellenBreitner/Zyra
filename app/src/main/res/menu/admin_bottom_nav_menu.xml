@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/classMenu"
+        android:icon="@drawable/subject_icon"
+        android:title="Class" />
+
+    <item
+        android:id="@+id/eventMenu"
+        android:icon="@drawable/event_icon"
+        android:title="Event" />
+
+</menu>

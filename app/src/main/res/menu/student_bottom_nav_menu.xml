@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/homeMenu"
+        android:icon="@drawable/home_icon"
+        android:title="Home" />
+
+    <item
+        android:id="@+id/scheduleMenu"
+        android:icon="@drawable/calender_icon"
+        android:title="Schedule" />
+
+    <item
+        android:id="@+id/enrollClassMenu"
+        android:icon="@drawable/add_class_icon"
+        android:title="Enroll" />
+
+    <item
+        android:id="@+id/classMenu"
+        android:icon="@drawable/subject_icon"
+        android:title="Class" />
+
+    <item
+        android:id="@+id/settingMenu"
+        android:icon="@drawable/settings_icon"
+        android:title="Setting" />
+
+</menu>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:layout_editor_absoluteX="-16dp"
+    tools:layout_editor_absoluteY="0dp">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/adminMaterialListCardView"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_margin="8dp"
+        app:cardBackgroundColor="#dee2fe"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeWidth="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/adminMaterialListIcon"
+                android:layout_width="60dp"
+                android:layout_height="70dp"
+                android:layout_margin="16dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/material_icon"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Medium" />
+
+
+            <TextView
+                android:id="@+id/adminMaterialListName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginTop="12dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/telegraf_ultra_bold"
+                android:lines="1"
+                android:text="Material name"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/adminMaterialListIcon"
+                app:layout_constraintTop_toTopOf="@+id/adminMaterialListIcon" />
+
+            <TextView
+                android:id="@+id/adminMaterialListPostDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/telegraf_regular_font"
+                android:lines="1"
+                android:text="Material post date"
+                android:textColor="@color/gray"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/adminMaterialListIcon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/adminMaterialListIcon"
+                app:layout_constraintTop_toBottomOf="@+id/adminMaterialListName"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="8dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/adminMaterialEditButton"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#dee2fe"
+                    android:fontFamily="@font/telegraf_ultra_bold"
+                    android:text="Edit"
+                    android:textColor="@color/black"
+                    app:icon="@drawable/edit_icon"
+                    app:iconGravity="end"
+                    app:iconTint="@color/black"
+                    app:strokeColor="@color/black"
+                    app:strokeWidth="2dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/adminMaterialDeleteButton"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#dee2fe"
+                    android:fontFamily="@font/telegraf_ultra_bold"
+                    android:text="Delete"
+                    android:textColor="@color/black"
+                    app:icon="@drawable/delete_icon"
+                    app:iconGravity="end"
+                    app:iconTint="@color/black"
+                    app:strokeColor="@color/black"
+                    app:strokeWidth="2dp" />
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".start_activity">
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animationStart"
+        android:layout_width="400dp"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/animation_start" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/telegraf_ultra_bold"
+        android:text="The only study app you\'ll ever need"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/materialTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/animationStart"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/materialTextView"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/telegraf_regular_font"
+        android:text="Upload class study materials, create electronic flashcard to study"
+        android:textAlignment="center"
+        android:textColor="@color/gray"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/startButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/animationStart"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/black"
+        android:fontFamily="@font/telegraf_ultra_bold"
+        android:paddingVertical="16dp"
+        android:text="Let's start"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/animationStart"
+        app:layout_constraintTop_toBottomOf="@+id/materialTextView"
+        app:layout_constraintVertical_bias="0.5" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

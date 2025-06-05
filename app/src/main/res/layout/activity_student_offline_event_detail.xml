@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".studentFragmentAndActivity.student_offline_event_detail_activity">
+
+    <ImageButton
+    android:id="@+id/offlineEventDetailsBackButton"
+    android:layout_width="80dp"
+    android:layout_height="80dp"
+    android:background="@color/white"
+    android:src="@drawable/back_icon"
+    app:layout_constraintBottom_toBottomOf="@+id/linearLayout3"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/offlineEventDetailsBackButton"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/offlineEventDetailsName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/telegraf_ultra_bold"
+            android:lines="1"
+            android:text="event name"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/offlineEventDetailsType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/telegraf_regular_font"
+            android:lines="1"
+            android:text="event type"
+            android:textColor="@color/gray"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/adminMaterialClassName" />
+
+        <TextView
+            android:id="@+id/offlineEventDetailsClass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/telegraf_regular_font"
+            android:lines="1"
+            android:text="event class"
+            android:textColor="@color/gray"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/adminMaterialClassName" />
+
+        <TextView
+            android:id="@+id/offlineEventDetailsDeadLine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/telegraf_regular_font"
+            android:lines="1"
+            android:text="event deadline"
+            android:textColor="@color/gray"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/adminMaterialClassName" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:fontFamily="@font/telegraf_ultra_bold"
+        android:text="Class Description"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/offlineEventSubmissionLinkButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/description">
+
+        <TextView
+            android:id="@+id/offlineEventDetailsDesc"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="8dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/telegraf_regular_font"
+            app:layout_constraintBottom_toTopOf="@+id/offlineEventSubmissionLinkButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/description"
+            app:layout_constraintVertical_bias="0.0" />
+    </ScrollView>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/offlineEventSubmissionLinkButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:backgroundTint="@color/black"
+        android:fontFamily="@font/telegraf_ultra_bold"
+        android:text="Submit"
+        android:textSize="18dp"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

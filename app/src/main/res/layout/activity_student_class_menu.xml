@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".studentFragmentAndActivity.student_class_menu_activity">
+
+    <ImageButton
+        android:id="@+id/studentMaterialListBackButton"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@color/white"
+        android:src="@drawable/back_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/studentMaterialListBackButton"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/studentMaterialClassName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/telegraf_ultra_bold"
+            android:lines="1"
+            android:text="Class Name"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/studentMaterialClassCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/telegraf_regular_font"
+            android:lines="1"
+            android:text="class code"
+            android:textColor="@color/gray"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/studentMaterialLecturer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/telegraf_regular_font"
+            android:lines="1"
+            android:text="lecuture name"
+            android:textColor="@color/gray"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </LinearLayout>
+
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayoutForClassMenu2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:tabGravity="center"
+        app:tabTextColor="@color/black"
+        app:tabIndicatorColor="@color/black"
+        app:tabMode="scrollable">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Material" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Event" />
+
+
+    </com.google.android.material.tabs.TabLayout>
+
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPagerForClassMenu2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tabLayoutForClassMenu2" />
+</androidx.constraintlayout.widget.ConstraintLayout>

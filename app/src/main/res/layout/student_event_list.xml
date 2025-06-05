@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="8dp">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/studentEventListCardView"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginHorizontal="8dp"
+        app:cardBackgroundColor="#dee2fe"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeWidth="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/studentEventListName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/telegraf_ultra_bold"
+                android:lines="1"
+                android:text="event name"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toStartOf="@+id/studentEventDownloadButton"
+                app:layout_constraintStart_toEndOf="@+id/studentEventListLogoCardView"
+                app:layout_constraintTop_toTopOf="@+id/studentEventListLogoCardView" />
+
+            <TextView
+                android:id="@+id/studentEventListClass"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/telegraf_regular_font"
+                android:lines="1"
+                android:text="event class"
+                android:textColor="@color/gray"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/studentEventDownloadButton"
+                app:layout_constraintStart_toEndOf="@+id/studentEventListLogoCardView"
+                app:layout_constraintTop_toBottomOf="@+id/studentEventListName" />
+
+
+            <TextView
+                android:id="@+id/studentEventListDeadline"
+                android:layout_width="0dp"
+                android:layout_height="13dp"
+                android:layout_marginHorizontal="8dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/telegraf_regular_font"
+                android:lines="1"
+                android:text="event deadline"
+                android:textColor="@color/gray"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/studentEventListLogoCardView"
+                app:layout_constraintEnd_toStartOf="@+id/studentEventDownloadButton"
+                app:layout_constraintStart_toEndOf="@+id/studentEventListLogoCardView"
+                app:layout_constraintTop_toBottomOf="@+id/studentEventListName"
+                app:layout_constraintVertical_bias="0.695" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/studentEventListLogoCardView"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="16dp"
+                app:cardCornerRadius="23dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/studentEventListLogoImage"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:src="@drawable/calculator" />
+            </androidx.cardview.widget.CardView>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/studentEventDownloadButton"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="16dp"
+                android:backgroundTint="@color/white"
+                app:circularflow_radiusInDP="50dp"
+                app:icon="@drawable/download_icon"
+                app:iconTint="@color/black"
+                app:iconSize="30dp"
+                app:iconGravity="top"
+                app:layout_constraintBottom_toBottomOf="@+id/studentEventListLogoCardView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/studentEventListLogoCardView"
+                app:strokeWidth="0dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
